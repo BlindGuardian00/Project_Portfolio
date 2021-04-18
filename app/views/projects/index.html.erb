@@ -1,0 +1,13 @@
+<%= render "navbar", project: @project %>
+
+<h1>Projects</h1>
+
+<ul>
+  <% @project.each do |project| %>
+    <li>
+        <%= link_to project.title, project %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Project", new_project_path %>
