@@ -3,11 +3,3 @@
 
 <p><%= @project.body %></p>
 
-<ul>
-    <li>
-        <%= link_to "Edit", edit_project_path(@project) %>
-        <li><%= link_to "Destroy", project_path(@project),
-                         method: :delete,
-                         data: { confirm: "Are you sure?" } %></li>
-    </li>
-</ul>

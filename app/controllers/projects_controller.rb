@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
 
   #Returns every project
   def index
-  @project = Project.all
+    @project = Project.all
   end
   
   #Finds a particular project (based on id)
@@ -22,10 +22,11 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
-      redirect_to @project
+      flash.alert = "Project was successfully created"
     else
-      render :new
+      flash.alert = "Body can't be blank"
     end
+    redirect_to new_project_path
   end
   
   #Returns the project that the user requested
@@ -41,17 +42,18 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
 
     if @project.update(project_params)
-      redirect_to @project
+      flash.alert = "Project was successfully updated"
     else
-      render :edit
+      flash.alert = "Body can't be blank"
     end
+    redirect_to edit_project_path
   end
 
   #Destroys the object in the database 
   def destroy
     @project = Project.find(params[:id])
+    flash.alert = "Project was successfully destroyed"
     @project.destroy
-
     redirect_to root_path
   end
 

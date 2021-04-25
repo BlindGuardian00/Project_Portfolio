@@ -1,11 +1,19 @@
 <%= render "navbar", project: @project %>
 
+<% if flash[:alert] %>
+<div class="alert"><%= flash[:alert] %></div>
+<% end %>
+
 <h1>Projects</h1>
 
 <ul>
   <% @project.each do |project| %>
     <li>
         <%= link_to project.title, project %>
+        <%= link_to "Edit", edit_project_path(project) %>
+        <%= link_to "Destroy", project_path(project),
+                         method: :delete,
+                         data: { confirm: "Are you sure?" } %>
     </li>
   <% end %>
 </ul>

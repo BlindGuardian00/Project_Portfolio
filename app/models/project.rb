@@ -1,4 +1,3 @@
 class Project < ApplicationRecord
-  validates :title, presence: true
-  validates :body, presence: true, length: { minimum: 10 }
+  validates_presence_of :title, :body
 end
