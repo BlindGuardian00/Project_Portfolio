@@ -253,7 +253,6 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.5)
   rails_12factor
-  rb-fsevent (>= 0.9.4)
   rspec-rails (~> 3.7)
   sass-rails (~> 5.0)
   selenium-webdriver
