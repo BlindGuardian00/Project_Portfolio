@@ -51,7 +51,6 @@ group :development, :test do
   gem 'sqlite3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.7'
-  gem 'capybara', '>= 3.35.3'
 end
 
 group :development do
@@ -68,6 +67,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  gem 'capybara', '>= 3.35.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
