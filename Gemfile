@@ -51,7 +51,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.7'
-  gem 'capybara', '>= 2.15'
+  gem 'capybara', '>= 3.35.3'
 end
 
 group :development do
