@@ -243,7 +243,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   bootstrap (~> 5.0.0.beta2)
   byebug
-  capybara
+  capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
